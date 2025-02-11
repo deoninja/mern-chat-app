@@ -9,7 +9,6 @@ import { connectDB } from "./lib/db.js";
 import authRoutes from "./routes/auth.route.js";
 import messageRoutes from "./routes/message.route.js";
 import {app, server} from './lib/socket.js'
-import {job }from "./cron/cron.js";
 
 dotenv.config();
 
@@ -39,5 +38,4 @@ if(process.env.NODE_ENV === "production") {
 server.listen(PORT, () => {
     console.log("Server is running on PORT: " + PORT);
     connectDB();
-    job.start();
 });

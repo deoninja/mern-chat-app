@@ -12,7 +12,7 @@ import {app, server} from './lib/socket.js'
 import {job }from "./cron/cron.js";
 
 dotenv.config();
-job.start();
+
 
 
 const PORT = process.env.PORT;
@@ -39,4 +39,5 @@ if(process.env.NODE_ENV === "production") {
 server.listen(PORT, () => {
     console.log("Server is running on PORT: " + PORT);
     connectDB();
+    job.start();
 });

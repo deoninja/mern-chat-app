@@ -1,7 +1,5 @@
 {
   "name": "mern-chat-app",
-  "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
   "build": "cd frontend && npm install && npm run build",
   "start": "cd backend && node index.js",

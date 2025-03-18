@@ -1,14 +1,13 @@
 {
-  "name": "mern-chat-app",
-  "scripts": {
-  "build": "cd frontend && npm install && npm run build",
-  "start": "cd backend && node index.js",
-  "vercel-build": "npm run build"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "cron": "^3.5.0"
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "frontend/**",
+      "use": "@vercel/static"
+    }
+  ]
 }

@@ -10,11 +10,6 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/backend/index.js"
-    },
     {
       "src": "/(.*)",
       "dest": "/frontend/index.html"
